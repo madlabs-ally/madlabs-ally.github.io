@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CalPlus</title>
-  <style>
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.calculator {
-  width: 250px;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.calculator input,
-.calculator button {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-.calculator button {
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.calculator button:hover {
-  background-color: #45a049;
-}
-
-.calculator p {
-  font-size: 18px;
-  font-weight: bold;
-}
-  </style>
+  <title>CalcPlus - Simple Calculator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" id="num1" placeholder="Enter number 1" />
-    <input type="text" id="num2" placeholder="Enter number 2" />
-    <button onclick="add()">+</button>
-    <button onclick="subtract()">-</button>
-    <button onclick="multiply()">*</button>
-    <button onclick="divide()">/</button>
-    <p id="result"></p>
-  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <script>
-    function add() {
-      var num1 = parseFloat(document.getElementById('num1').value);
-      var num2 = parseFloat(document.getElementById('num2').value);
-      var result = num1 + num2;
-      document.getElementById('result').innerHTML = 'Result: ' + result;
-    }
+  <section id="intro">
+    <div class="cover-image">
+      <h1>CalcPlus</h1>
+      <p>A Simple Calculator App</p>
+      <a href="#calculator-app" class="cta-button">Try Now</a>
+    </div>
+  </section>
 
-    function subtract() {
-      var num1 = parseFloat(document.getElementById('num1').value);
-      var num2 = parseFloat(document.getElementById('num2').value);
-      var result = num1 - num2;
-      document.getElementById('result').innerHTML = 'Result: ' + result;
-    }
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>CalcPlus is a user-friendly and intuitive calculator app designed to perform basic arithmetic operations. Whether you need to add, subtract, multiply, or divide numbers, CalcPlus provides a convenient and efficient solution. With its sleek design and straightforward interface, it offers a seamless calculation experience. CalcPlus is the perfect tool for everyday calculations, making math tasks a breeze. Simplify your calculations with CalcPlus and enjoy the ease of number crunching.</p>
+    </div>
+  </section>
 
-    function multiply() {
-      var num1 = parseFloat(document.getElementById('num1').value);
-      var num2 = parseFloat(document.getElementById('num2').value);
-      var result = num1 * num2;
-      document.getElementById('result').innerHTML = 'Result: ' + result;
-    }
+  <section id="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature">
+        <img src="gear.svg" width="50px" alt="Feature 1">
+        <h3>Advanced Functions</h3>
+        <p>Unlock advanced mathematical functions such as square root, exponential, logarithmic, and trigonometric calculations. Perform complex calculations effortlessly.</p>
+      </div>
+      <div class="feature">
+        <img src="sd-card.svg" width="50px" alt="Feature 2">
+        <h3>Memory Storage</h3>
+        <p>Store and recall values using the memory functionality. Save numbers for future use and easily retrieve them whenever needed.</p>
+      </div>
+      <div class="feature">
+        <img src="phone.svg" width="50px" alt="Feature 3">
+        <h3>Responsive Design</h3>
+        <p>Enjoy a seamless experience on any device. CalcPlus is optimized for responsiveness, ensuring easy and convenient calculations on desktops, tablets, and mobile devices.</p>
+      </div>
+    </div>
+  </section>
 
-    function divide() {
-      var num1 = parseFloat(document.getElementById('num1').value);
-      var num2 = parseFloat(document.getElementById('num2').value);
-      var result = num1 / num2;
-      document.getElementById('result').innerHTML = 'Result: ' + result;
-    }
-  </script>
+  <section id="calculator-app">
+    <div class="container">
+      <div class="calculator">
+        <input type="text" id="num1" placeholder="Enter number 1" />
+        <input type="text" id="num2" placeholder="Enter number 2" />
+        <button onclick="add()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="multiply()">*</button>
+        <button onclick="divide()">/</button>
+        <p id="result"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About the Project</h2>
+      <p>
+        Have you ever had a moment when you wished there was a tool that could simplify your life and make complex tasks easier? That's exactly what inspired us to create this calculator app. It all began with a personal experience that sparked the idea and ignited our passion for creating something innovative and useful.
+      </p>
+      <p>
+        As individuals pursuing our education at Holberton School, we constantly strive to apply our knowledge and skills to real-world scenarios. This project, however, goes beyond fulfilling academic requirements. It emerged from a shared desire to make a meaningful impact and create a tool that would make calculations effortless and intuitive.
+      </p>
+      <p>
+        The journey of this project started several months ago when we began brainstorming ideas and designing the user interface. We dedicated countless hours to research, development, and testing, driven by our shared vision to create a reliable and user-friendly calculator app.
+      </p>
+      <p>
+        As the app evolved, we faced challenges and obstacles, but we overcame them through collaboration, problem-solving, and continuous improvement. It was a journey filled with learning opportunities, and each step brought us closer to our goal of delivering a high-quality calculator app.
+      </p>
+      <p>
+        This calculator app is part of our portfolio for Holberton School, where we are honing our software development skills. It showcases our abilities and commitment to creating practical solutions for everyday problems. You can find more information about Holberton School and our other projects on our <a href="https://www.holbertonschool.com/">Holberton School Portfolio</a> page.
+      </p>
+      
+      <h3>Team Members</h3>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/madalitso-simbeye-5a39701a7/">Madalitso Simbeye</a> | <a href="https://github.com/madlabs-ally">GitHub</a> 
+        </li>
+       
+      </ul>
+      
+      <p>
+        GitHub Repository: <a href="https://github.com/madlabs-ally/madlabs-ally.github.io">Calculator App Repository</a>
+      </p>
+    </div>
+  </section>
+  
+
+  <script src="script.js"></script>
 </body>
 </html>
