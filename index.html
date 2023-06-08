@@ -1,58 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MeloSpot 100</title>
+  <title>CalPlus</title>
   <style>
-    /* CSS styling for the header and cover image */
-    header {
-      background-color: #f5f5f5;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    h1 {
-      margin-top: 50px;
-      font-size: 36px;
-    }
-    
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input,
+.calculator button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.calculator button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator button:hover {
+  background-color: #45a049;
+}
+
+.calculator p {
+  font-size: 18px;
+  font-weight: bold;
+}
   </style>
 </head>
 <body>
   <header>
-    <img src="path-to-cover-image.jpg" alt="Project Cover Image" width="800" height="400">
-    <h1>Your Project Name</h1>
-    <p>A one-line phrase and/or description of your project</p>
-    <nav>
-      <ul>
-        <li><a href="#section1">Section 1</a></li>
-        <li><a href="#section2">Section 2</a></li>
-      </ul>
-    </nav>
-    <a class="button" href="link-to-deployed-project">Visit Project</a>
+    <h1>CalcPlus</h1>
+    <p>A Simple Calculator App</p>
   </header>
+  <div class="calculator">
+    <input type="text" id="num1" placeholder="Enter number 1" />
+    <input type="text" id="num2" placeholder="Enter number 2" />
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+    <p id="result"></p>
+  </div>
 
-  <!-- Section 1 -->
-  <section id="section1">
-    <!-- Content for Section 1 -->
-  </section>
+  <script>
+    function add() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 + num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
 
-  <!-- Section 2 -->
-  <section id="section2">
-    <!-- Content for Section 2 -->
-  </section>
+    function subtract() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 - num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+
+    function multiply() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 * num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+
+    function divide() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 / num2;
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+  </script>
 </body>
 </html>
