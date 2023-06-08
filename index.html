@@ -4,28 +4,48 @@
   <title>Simple Calculator</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-    }
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    .calculator {
-      width: 200px;
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 0 auto;
-    }
+.calculator {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .calculator input {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 5px;
-      font-size: 16px;
-    }
+.calculator input,
+.calculator button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
 
-    .calculator button {
-      width: 48%;
-      padding: 5px;
-      font-size: 16px;
-    }
+.calculator button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator button:hover {
+  background-color: #45a049;
+}
+
+.calculator p {
+  font-size: 18px;
+  font-weight: bold;
+}
   </style>
 </head>
 <body>
